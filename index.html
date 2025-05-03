@@ -1,0 +1,630 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Restaurant UI</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* General Reset */
+   /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+    /* Sets the background to White Smoke */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-menu ul li {
+  margin: 0 15px;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Banner Styling */
+.banner {
+  background: url('https://tse2.mm.bing.net/th?id=OIP.ABTWbupEozhub1ACZUvFUQHaEo&pid=Api&P=0&h=220') no-repeat center center/cover;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-weight: 200px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.banner-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.banner-content .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #ff6347;
+  color:white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.banner-content .btn:hover {
+  background-color: #e5533c;
+}
+
+/* Main Content */
+main {
+  margin-top: 80px;
+  padding: 20px;
+}
+
+.menu-grid, .gallery-grid {
+  display: flex;
+  gap: 20px;
+}
+
+
+
+.menu-item img, .gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+#menu .menu-grid .menu-item img {
+  width:200px; /* Example styling */
+  height:200px;
+  border-radius: 10px;
+}
+
+
+
+/*cosrousel*/
+ 
+      
+
+
+h1 {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 2rem;
+      color: #ff6347; /* Highlighted heading color */
+    }
+
+    /* Grid Gallery */
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+      gap: 20px; /* Space between items */
+      padding: 40px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds depth */
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Maintains aspect ratio */
+    }
+
+    /* Overlay Text */
+    .gallery-item .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 10px;
+    }
+
+    .gallery-item:hover .overlay {
+      opacity: 1; /* Display overlay on hover */
+    }
+
+    .overlay h3 {
+      font-size: 1.5rem;
+    }
+
+
+
+
+  
+    .carousel-inner .carousel-item.active img{
+      width:200px;
+      height: 200px;
+    }
+    .carousel-inner .carousel-item img{
+      width:200px;
+      height: 200px;
+    }
+    /* Style the slider buttons */
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: black; /* Makes the button background black */
+  border-radius: 50%; /* Circular button styling */
+  width: 40px; /* Adjust button size */
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none; /* Removes border */
+}
+
+/* Style the slider button icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* Ensures the icon is white or contrasts well with black background */
+  background-color: black; /* Sets black background for the icons */
+  border-radius: 50%; /* Smooth circular effect */
+}
+ /* Wrapper for centering */
+.wrapper {
+  display: flex; /* Enables Flexbox */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+    /* Full viewport height for centering */
+  /*background-color: #f8f8f8;  Optional: Background color for contrast */
+  background-color: white;
+}
+
+/* Carousel styling */
+#carouselExample {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  border-radius: 10px; /* Rounded edges for aesthetic */
+}
+  
+
+
+/* Find Us Section Styling */
+.find-us {
+      padding: 40px 20px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .find-us h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #333333;
+    }
+
+    .find-us .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .find-us .google-map {
+      flex: 2;
+      max-width: 600px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .find-us .contact-info {
+      flex: 1;
+      background-color: #f1f1f1;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    .find-us .contact-info p {
+      margin: 10px 0;
+      color: #555555;
+    }
+
+    .find-us .contact-info h3 {
+      margin-bottom: 15px;
+      color: #000000;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #333333;
+      color: #ffffff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    footer .social-icons a {
+      margin: 0 10px;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    footer .social-icons a:hover {
+      color: #ff6347; /* Highlight color on hover */
+    }
+
+
+
+
+    /**About**/
+    .about-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #d32f2f;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  max-width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+/* Banner Section */
+.banner {
+  height: 100vh; /* Full-screen height */
+  background-image: url('https://media.istockphoto.com/id/1316145932/photo/table-top-view-of-spicy-food.webp?a=1&b=1&s=612x612&w=0&k=20&c=scseGeDCjSghwD2RELSaaT2Pn2NQz0gflEQ4BuiTSjs='); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-content {
+  text-align: center;
+  color: black; /* Black text color */
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8); /* Slight white overlay to make text stand out */
+  border-radius: 10px;
+}
+
+.banner-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.banner-content p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #d32f2f; /* Button color */
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #a80000; /* Hover effect */
+}
+
+
+.logo img{
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+}
+
+
+
+
+/***last*/
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+ <!-- Header -->
+ <header class="header" id="home">
+    <div class="logo">
+      <img src="https://up.yimg.com/ib/th?id=OIP.V84WzHFW6KRvRBd83-1wHwAAAA&pid=Api&rs=1&c=1&qlt=95&w=146&h=106" alt="Restaurant Logo">
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <!-- <li><a href="#home">Home</a></li> -->
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#findus">Find Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Welcome to Pizza World</h1>
+      <p>Discover the true taste of happiness, slice by slice!</p>
+      <p>Indulge in our handcrafted pizzas, made from the freshest ingredients and bursting with authentic flavors.</p>
+      <p>Whether you're here for a casual outing or a grand celebration, we're here to make every moment special.</p>
+      <a href="#menu" class="btn">Explore Menu</a>
+    </div>
+</section>
+
+
+  <!-- Main Content -->
+  <section id="about" class="about-section">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>
+          Welcome to Pizza World, where every slice is crafted with love and perfection.
+          Our journey began with a simple vision: to create the finest pizzas that bring
+          people together, one delicious bite at a time. Inspired by traditional Italian 
+          flavors and infused with modern culinary creativity, our pizzas are made from 
+          the freshest, locally-sourced ingredients. From our classic Margherita to our 
+          bold Pepperoni Burst, each creation tells a story of passion and dedication.
+        </p>
+        <p>
+          At Pizza World, we believe that food is more than just nourishment; it's an 
+          experience to be shared with family, friends, and loved ones. That’s why we 
+          strive to offer a warm and inviting atmosphere where memories are made and shared.
+        </p>
+        <p>
+          Whether you’re here for a casual meal or a festive celebration, our promise 
+          is to deliver not just a pizza, but a slice of happiness, every single time.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.h32UzS4n4vsbuO4Bk7aXWQHaE9&pid=Api&P=0&h=220" alt="Delicious Pizza">
+      </div>
+    </div>
+  </section>
+     
+    <section class="menu-section" id="menu">
+        <h2>Our Delicious Menu</h2>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.Td2DQmpOqLWO1OTs-EUD6gHaE0&pid=Api&w=148&h=148&c=7&dpr=2&rs=1" alt="Margherita Pizza">
+            <h3>Margherita Pizza</h3>
+            <p>Classic tomato base topped with melted mozzarella cheese.</p>
+          </div>
+          <div class="menu-item">
+            <img src="https://www.butter-n-thyme.com/wp-content/uploads/2023/03/Bismark-Pizza.jpg" alt="Pepperoni Pizza">
+            <h3>Pepperoni Pizza</h3>
+            <p>Loaded with spicy pepperoni and gooey cheese.</p>
+          </div>
+          <div class="menu-item">
+            <img src="https://sp.yimg.com/ib/th?id=OIP.Td2DQmpOqLWO1OTs-EUD6gHaE0&pid=Api&w=148&h=148&c=7&dpr=2&rs=1" alt="Veggie Pizza">
+            <h3>Veggie Delight Pizza</h3>
+            <p>A healthy mix of fresh vegetables and flavorful toppings.</p>
+          </div>
+          <div class="menu-item">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.nvGFdjeEBCYRq3mmW5W4swHaEK&pid=Api&P=0&h=220" alt="BBQ Chicken Pizza">
+            <h3>BBQ Chicken Pizza</h3>
+            <p>Succulent chicken with tangy BBQ sauce and crispy crust.</p>
+          </div>
+          <div class="menu-item">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.ABTWbupEozhub1ACZUvFUQHaEo&pid=Api&P=0&h=220" alt="Cheese Burst">
+            <h3>Cheese Burst Pizza</h3>
+            <p>An explosion of cheese and flavor in every bite.</p>
+          </div>
+        </div>
+      </section>
+    
+    <!-- Carousel -->
+     <div class="wrapper">
+
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.yTKiZSGBh26IkIMbvOCJ0QHaE7&pid=Api&P=0&h=220" class="d-block w-20" alt="Image 1">
+      </div>
+      <div class="carousel-item">
+        <img src="https://i2.wp.com/www.pieominegreens.com/wp-content/uploads/2017/03/pie-o-mine-pizza-graphic-e1490895712746.jpg?fit=1383,1376&ssl=1" class="d-block w-20" alt="Image 2">
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.pizzaplanet.com/wp-content/uploads/2016/02/sarang-pande-5djt8Pkqdc4-unsplash-scaled.jpg" class="d-block w-20" alt="Image 3">
+      </div>
+      <div class="carousel-item">
+        <img src="https://gullahcuisine.net/wp-content/uploads/2022/05/Variedad-de-pizzas-artesanales-scaled.jpeg" class="d-block w-20" alt="Image 4">
+      </div>
+      <div class="carousel-item">
+        <img src="https://pizzaware.com/wp-content/uploads/2023/05/Thin-Crust-Dominos-Pizza.jpg" class="d-block w-20" alt="Image 5">
+      </div>
+    </div>
+    <!-- Carousel controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<br>
+<br>
+  
+
+
+      <section id="gallery">
+      
+      <h1>Gallery</h1>
+      <div class="gallery-container">
+        <div class="gallery-item">
+          <img src="https://tse3.mm.bing.net/th?id=OIP.zo8OTRHNPYktKatORpZ9SQHaE8&pid=Api&P=0&h=220" alt="Pizza 1">
+          <div class="overlay">
+            <h3>Pizza 1</h3>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://tse2.mm.bing.net/th?id=OIP.l8LTd7WedRkqBu_7LsyJowHaEK&pid=Api&P=0&h=220" alt="Pizza 2">
+          <div class="overlay">
+            <h3>Pizza 2</h3>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://tse1.mm.bing.net/th?id=OIP.gVvi9ineTYCQmNLDmItrXQHaE6&pid=Api&P=0&h=220" alt="Pizza 3">
+          <div class="overlay">
+            <h3>Pizza 3</h3>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://sp.yimg.com/ib/th?id=OIP.Td2DQmpOqLWO1OTs-EUD6gHaE0&pid=Api&w=148&h=148&c=7&dpr=2&rs=1" alt="Pizza 4">
+          <div class="overlay">
+            <h3>Pizza 4</h3>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://tse1.mm.bing.net/th?id=OIP.a9WeF3jfFBLOxVTVQsowgQHaE8&pid=Api&P=0&h=220" alt="Pizza 5">
+          <div class="overlay">
+            <h3>Pizza 5</h3>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://tse1.mm.bing.net/th?id=OIP.olSHgC58bgAYbeFtqYH6mQHaEo&pid=Api&P=0&h=220" alt="Pizza 5">
+          <div class="overlay">
+            <h3>Pizza 6</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ <!-- Find Us Section -->
+ <section class="find-us" id="findus">
+  <h2>Find Us</h2>
+  <div class="contact-container">
+    <!-- Google Maps Embed -->
+    <div class="google-map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.8521640501826!2d144.96453941612094!3d-37.81631827975145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5778bb0eeb4a55e!2sFederation%20Square!5e0!3m2!1sen!2sus!4v1677319095582!5m2!1sen!2sus" 
+        width="100%" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="contact-info">
+      <h3>Contact Information</h3>
+      <p><strong>Address:</strong> 123 Kukatpally,Hyderabad,India</p>
+      <p><strong>Phone:</strong> +61 3 1234 5678</p>
+      <p><strong>Email:</strong> contact@pizzaworld.com</p>
+      <p><strong>Hours:</strong> Mon - Fri: 10am - 10pm | Sat - Sun: 11am - 11pm</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Pizza World. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i> Facebook</a>
+    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i> Instagram</a>
+    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="bi bi-twitter"></i> Twitter</a>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
