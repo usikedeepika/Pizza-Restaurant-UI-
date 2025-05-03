@@ -1,0 +1,103 @@
+/* Center the image */
+
+.carousel-inner img {
+  width: auto; /* Keep natural width */
+  height: 600px; /* Set a fixed height */
+  margin:  auto; /* Centers the image */
+  object-fit: cover; /* Ensures the image looks neat */
+}
+
+/* Style the slider buttons */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust vertical alignment */
+  z-index: 1; /* Ensure the buttons are on top of the image */
+  width: 50px; /* Size of the buttons */
+  height: 50px; /* Size of the buttons */
+  background-color: rgba(18, 4, 4, 0.921); /* Semi-transparent background */
+  border-radius: 50%; /* Circular buttons */
+  border: none; /* Remove borders */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-control-prev {
+  left: 20px; /* Push it slightly away from the left edge */
+}
+
+.carousel-control-next {
+  right: 20px; /* Push it slightly away from the right edge */
+}
+
+/* Style the icons (arrows) inside the buttons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(2); /* Makes icons white */
+  width: 20px; /* Adjust icon size */
+  height: 20px; /* Adjust icon size */
+}
+
+.carousel {
+  background-color:antiquewhite;
+  width: 600px; /* Sets a fixed width for the carousel */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow for aesthetics */
+  border-radius: 10px; /* Optional: Rounds the edges */
+}
+
+
+.menu-section {
+  padding: 40px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.menu-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.menu-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.menu-item {
+  width: 300px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+}
+
+.menu-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.menu-item h3 {
+  font-size: 1.5rem;
+  color: #444;
+  margin-top: 15px;
+}
+
+.menu-item p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+
+
+@media screen and (max-width: 300px) {
+  .banner-content {
+    display: none;
+  }
+}
